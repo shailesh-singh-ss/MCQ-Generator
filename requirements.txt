@@ -2,4 +2,10 @@ openai
 langchain
 streamlit
 python-dotenv
-pyPDF2
+PyPDF2
+huggingface_hub
+transformers
+accelerate
+bitsandbytes
+
+-e . 

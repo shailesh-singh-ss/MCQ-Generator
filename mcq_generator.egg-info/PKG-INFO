@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mcq-generator
+Version: 0.0.1
+Author: shailesh singh
+Author-email: shaileshsingh121122.gmail.com
+Requires-Dist: openai
+Requires-Dist: langchain
+Requires-Dist: stremlit
+Requires-Dist: python-dotenv
+Requires-Dist: PyPDF2
