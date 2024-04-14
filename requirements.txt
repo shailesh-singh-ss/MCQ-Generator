@@ -1,11 +1,8 @@
-openai
+cohere
 langchain
+langchain_cohere
 streamlit
 python-dotenv
 PyPDF2
-huggingface_hub
-transformers
-accelerate
-bitsandbytes
 
--e . 
+-e.

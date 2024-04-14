@@ -1,5 +1,5 @@
-openai
+cohere
 langchain
-stremlit
+streamlit
 python-dotenv
 PyPDF2

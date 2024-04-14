@@ -3,8 +3,8 @@ Name: mcq-generator
 Version: 0.0.1
 Author: shailesh singh
 Author-email: shaileshsingh121122.gmail.com
-Requires-Dist: openai
+Requires-Dist: cohere
 Requires-Dist: langchain
-Requires-Dist: stremlit
+Requires-Dist: streamlit
 Requires-Dist: python-dotenv
 Requires-Dist: PyPDF2
