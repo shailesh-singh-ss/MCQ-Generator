@@ -18,6 +18,8 @@ with open('Response.json','r') as file:
 # Create a title for the app
 st.title("MCQs Creator Application with LangChain 🦜️🔗")
 
+
+
 # Create a form using st.form
 with st.form("user_inputs"):
     # File Upload
@@ -62,22 +64,27 @@ with st.form("user_inputs"):
                     # Extract the quiz data from the response
 
                     quiz = response.get("quiz", None)
-                    if quiz is not None:
+                    review = response.get("review",None);
+                    if quiz and review is not None:
                         table_data = get_table_data(quiz)
+                        
                         if table_data is not None:
                             df = pd.DataFrame(table_data)
                             df.index=df.index+1
                             st.table(df)
+                            
+                            
 
-                            # Display the review in a text box as wel
-                            st.text_area(label="Review", value=response["review"])
+                        st.write(review)
+                            
 
                     else :
                         st.error("Error in the table data")
                 else:
                     st.write(response)
 
-                    
+              
+
 
 
 logging.info("Hi, I am going to start my excution....")
