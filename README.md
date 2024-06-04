@@ -1,4 +1,4 @@
-# MCQ Question Generator with AI
+# MCQ Generator with AI
 
 This project leverages generative AI to create multiple-choice questions (MCQs) with a review mechanism. The system utilizes `LangChain`, `Python`, `Streamlit`, and the `Cohere` LLM (Language Model) to generate questions based on the content of uploaded PDF or TXT files.
 
