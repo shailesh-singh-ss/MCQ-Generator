@@ -26,14 +26,14 @@ def read_file(file):
     
 
 
-def get_table_data(quiz_str):
+def get_table_data(quiz_str: dict):
     try:
         # convert the quiz from a str to dict
-        quiz_dict=json.loads(quiz_str)
+        # quiz_dict=json.loads(quiz_str)
         quiz_table_data=[]
 
         # iterate over the quiz dictionary and extract the required information
-        for key,value in quiz_dict.items():
+        for key,value in quiz_str.items():
             mcq=value["mcq"]
             options=" || ".join(
                 [
@@ -49,6 +49,18 @@ def get_table_data(quiz_str):
     except Exception as e:
         traceback.print_exception(type(e), e, e.__traceback__)
         return False
+    
+def extract_json_data(data_str):
+    # Remove the enclosing ```json and ''' (or similar) from the string
+    cleaned_str = data_str.strip('```json').strip("```").strip()
+    
+    try:
+        # Parse the cleaned string into a JSON object
+        data = json.loads(cleaned_str)
+        
+        return data
+    except json.JSONDecodeError as e:
+        return f"Error decoding JSON: {e}"
 
 
 

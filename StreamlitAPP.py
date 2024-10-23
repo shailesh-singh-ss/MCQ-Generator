@@ -5,6 +5,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from src.mcqgenerator.utils import read_file
 from src.mcqgenerator.utils import get_table_data
+from src.mcqgenerator.utils import extract_json_data
 import streamlit as st
 from src.mcqgenerator.MCQGenerator import generate_evaluate_chain
 from src.mcqgenerator.logger import logging 
@@ -66,7 +67,8 @@ with st.form("user_inputs"):
                     quiz = response.get("quiz", None)
                     review = response.get("review",None);
                     if quiz and review is not None:
-                        table_data = get_table_data(quiz)
+                        quiz_json = extract_json_data(quiz)
+                        table_data = get_table_data(quiz_json)
                         
                         if table_data is not None:
                             df = pd.DataFrame(table_data)
