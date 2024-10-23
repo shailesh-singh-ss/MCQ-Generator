@@ -1,4 +1,4 @@
-# MCQ Question Generator with AI
+# MCQ Generator with AI
 
 This project leverages generative AI to create multiple-choice questions (MCQs) with a review mechanism. The system utilizes `LangChain`, `Python`, `Streamlit`, and the `Cohere` LLM (Language Model) to generate questions based on the content of uploaded PDF or TXT files.
 
@@ -42,7 +42,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. Run the Streamlit application:
     ```bash
-    streamlit run app.py
+    streamlit run StreamlitAPP.py
     ```
 
 2. Open your web browser and navigate to `http://localhost:8501`.
@@ -76,6 +76,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-If you have any questions or feedback, please contact us at your-ss.forcoding.com.
+If you have any questions or feedback, please contact us at your-ss.forcoding@gmail.com.
 
 ---
